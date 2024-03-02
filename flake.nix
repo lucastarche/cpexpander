@@ -21,7 +21,7 @@
         buildInputs = buildInputs;
       };
 
-      packages.${system}.default = pkgs.rustPlatform.buildRustPackages {
+      packages.${system}.default = pkgs.rustPlatform.buildRustPackage {
         name = "cpexpander";
         cargoLock.lockFile = ./Cargo.lock;
         src = pkgs.lib.cleanSource ./.;
